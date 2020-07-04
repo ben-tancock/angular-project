@@ -10,6 +10,9 @@ import { NestedComponent } from './nested/nested.component';
 import { InputComponent } from './input/input.component';
 import { PersonComponent } from './person/person.component';
 import { ClassExpressionsComponent } from './class-expressions/class-expressions.component';
+import { TypescriptExpressionsComponent } from './typescript-expressions/typescript-expressions.component';
+import { PipingComponent } from './piping/piping.component';
+import { CustomPipe } from './custom.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { ClassExpressionsComponent } from './class-expressions/class-expressions
     NestedComponent,
     InputComponent,
     PersonComponent,
-    ClassExpressionsComponent
+    ClassExpressionsComponent,
+    TypescriptExpressionsComponent,
+    PipingComponent,
+    CustomPipe
   ],
   imports: [
     BrowserModule,
