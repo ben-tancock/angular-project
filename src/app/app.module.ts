@@ -13,6 +13,7 @@ import { ClassExpressionsComponent } from './class-expressions/class-expressions
 import { TypescriptExpressionsComponent } from './typescript-expressions/typescript-expressions.component';
 import { PipingComponent } from './piping/piping.component';
 import { CustomPipe } from './custom.pipe';
+import { BindingComponent } from './binding/binding.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CustomPipe } from './custom.pipe';
     ClassExpressionsComponent,
     TypescriptExpressionsComponent,
     PipingComponent,
-    CustomPipe
+    CustomPipe,
+    BindingComponent
   ],
   imports: [
     BrowserModule,
