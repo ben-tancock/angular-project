@@ -14,6 +14,8 @@ import { TypescriptExpressionsComponent } from './typescript-expressions/typescr
 import { PipingComponent } from './piping/piping.component';
 import { CustomPipe } from './custom.pipe';
 import { BindingComponent } from './binding/binding.component';
+import { TwoWayComponent } from './two-way/two-way.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,11 +30,13 @@ import { BindingComponent } from './binding/binding.component';
     TypescriptExpressionsComponent,
     PipingComponent,
     CustomPipe,
-    BindingComponent
+    BindingComponent,
+    TwoWayComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
