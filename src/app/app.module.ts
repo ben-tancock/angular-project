@@ -16,6 +16,10 @@ import { CustomPipe } from './custom.pipe';
 import { BindingComponent } from './binding/binding.component';
 import { TwoWayComponent } from './two-way/two-way.component';
 import { FormsModule } from '@angular/forms';
+import { StructuralDirectiveComponent } from './structural-directive/structural-directive.component';
+import { CustomDirectiveDirective } from './custom-directive.directive';
+import { CustomDirectiveComponent } from './custom-directive/custom-directive.component';
+import { ContainerComponent } from './container/container.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,11 @@ import { FormsModule } from '@angular/forms';
     PipingComponent,
     CustomPipe,
     BindingComponent,
-    TwoWayComponent
+    TwoWayComponent,
+    StructuralDirectiveComponent,
+    CustomDirectiveDirective,
+    CustomDirectiveComponent,
+    ContainerComponent
   ],
   imports: [
     BrowserModule,

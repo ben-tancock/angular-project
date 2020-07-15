@@ -18,6 +18,26 @@
   <piping></piping>
   <app-binding></app-binding>
   <app-two-way></app-two-way>
+  <app-structural-directive></app-structural-directive> 
+  <app-custom-directive></app-custom-directive> 
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <h1>The following used the built-in directive, ng-content, to take existing html from between two element tags that use a directive and use that html within a components template.</h1>
+  <!-- A custom directive is being applied to the elements below called 'container'-->
+  <span *ngFor="let image of images" container title="{{image.title}}" description="{{image.description}}">
+    <img src="{{image.src}}" >
+  </span>
+
+  <br><br><br>
+  <span container>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor indididunt ut labore</p>
+  </span>
+
+  <br><br><br>
+
+  <span container>
+    <div class="diver"></div>
+  </span>
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

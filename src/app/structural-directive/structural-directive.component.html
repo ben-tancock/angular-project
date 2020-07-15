@@ -1,0 +1,61 @@
+<div *ngIf="condition">condition met</div>
+<div *ngIf="!condition">condition not met</div>
+<button (click)="changeCondition()">Change Condition</button>
+
+<hr>
+
+<ng-template ngFor let-person [ngForOf]="people">
+    <div>name: {{person}}</div>
+</ng-template>
+
+<hr>
+
+<h3>Monsters and Where They Live</h3>
+<ul *ngFor="let monster of monsters">
+    {{monster.name}}
+    {{monster.location}}
+</ul>
+
+<hr>
+
+<div [ngSwitch]="time">
+    <span *ngSwitchCase="'night'">It's night time
+        <button (click)="changeDay()">change to day</button>
+    </span>
+    <span *ngSwitchDefault>It's day time
+        <button (click)="changeNight()">change to night</button>
+    </span>
+</div>
+
+<form>
+    <span>name: </span>
+    <input name="name" [(ngModel)]="name">
+    <br>
+    <span>color:</span>
+    <input type="checkbox" (click)="enabler()">
+    <select #optionColor [(ngModel)]="color"  name="color" [disabled]="isDisabled">
+        <option *ngFor="let color of colors" [value]="color">{{color}}</option>
+    </select>
+    <hr>
+
+    <span>Change Class</span><br>
+    <select #classOption multiple name="styles" (change)="addClass($event)">
+        <option *ngFor="let class of classes" [value]="class">{{class}}</option>
+    </select>
+    <br>
+
+    <span>
+        press and hold for control/command
+        <br>
+        to select multiple options
+    </span>
+</form>
+<hr>
+
+<span>Name: {{name}}</span>
+<br>
+
+<span [ngClass]="selectedClass" [ngStyle]="{'color':optionColor.value}">
+    color: {{optionColor.value}}
+</span>
+<br>
